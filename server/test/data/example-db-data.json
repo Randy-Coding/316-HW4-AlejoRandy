@@ -18,6 +18,16 @@
             "playlists": [
                 "68f526c4ec1ea2ad00a6fae8"
             ]
+        },
+        {
+            "firstName": "Bob",
+            "lastName": "Burger",
+            "email": "a@mail.com",
+            "passwordHash": "$2a$12$Xfv5y/0qO0f9iHqzZqd4yOyf.Ivoa7ebuINvjy8hjHdHOumYQkRPq",
+            "playlists": [
+                "68f526c4ec1ea2ad00a6fae8"
+            ]
+
         }
     ],
     "playlists": [
@@ -207,6 +217,219 @@
                     "artist": "The Clash",
                     "year": 1979,
                     "youTubeId": "uEK9oK02D1M"
+                }
+            ]
+        },
+        {
+            "_id": "68eafb78aa5b3035dd5d91b2",
+            "ownerEmail": "a@mail.com",
+            "name": "Old Songs",
+            "songs": [
+                {
+                    "title": "Billie Jean",
+                    "artist": "Michael Jackson",
+                    "year": 1983,
+                    "youTubeId": "Zi_XLOBDo_Y"
+                },
+                { 
+                    "title": "Bad", 
+                    "artist": "Michael Jackson",
+                    "year": 1987,
+                    "youTubeId": "dsUXAEzaC3Q" 
+                },
+                {
+                    "title": "Where is the love?",
+                    "artist": "Black Eyed Peas",
+                    "year": 2003,
+                    "youTubeId": "WpYeekQkAdc"
+                },
+                {
+                    "title": "Boom Boom Pow",
+                    "artist": "Black Eyed Peas",
+                    "year": 2009,
+                    "youTubeId": "4m48GqaOz90"
+                },
+                {
+                    "title": "Fly Me to the Moon",
+                    "artist": "Frank Sinatra",
+                    "year": 1964,
+                    "youTubeId": "ZEcqHA7dbwM"
+                },
+                {
+                    "title": "Baby, It's Cold Outside",
+                    "artist": "Dean Martin",
+                    "year": 1944,
+                    "youTubeId": "lnYSTnTMGQo"
+                },
+                {
+                    "title": "Beat It",
+                    "artist": "Michael Jackson",
+                    "year": 1983,
+                    "youTubeId": "oRdxUFDoQe0"
+                },
+                {
+                    "title": "Feeling Good",
+                    "artist": "Michael Buble",
+                    "year": 2005,
+                    "youTubeId": "Edwsf-8F3sI"
+                },
+                {
+                    "title": "Sway",
+                    "artist": "Michael Buble",
+                    "year": 2003,
+                    "youTubeId": "xeMOO5EudYs"
+                },
+                {
+                    "title": "Me and Mrs. Jones",
+                    "artist": "Michael Buble",
+                    "year": 2007,
+                    "youTubeId": "b52xVnZBs7E"
+                },
+                {
+                    "title": "Home",
+                    "artist": "Michael Buble",
+                    "year": 2005,
+                    "youTubeId": "lbSOLBMUvIE"
+                },
+                {
+                    "title": "Obsesion",
+                    "artist": "Aventura",
+                    "year": 2002,
+                    "youTubeId": "SEjw5rdyvVg"
+                },
+                {
+                    "title": "Yo Quisera Amarla",
+                    "artist": "King Crimson",
+                    "year": 2009,
+                    "youTubeId": "EUltZFvGG40"
+                },
+                {
+                    "title": "Dile Al Amor",
+                    "artist": "Aventura",
+                    "year": 2009,
+                    "youTubeId": "0XCot42qTvA"
+                },
+                {
+                    "title": "La Boda",
+                    "artist": "Aventura",
+                    "year": 2005,
+                    "youTubeId": "XFRfrPkfghY"
+                },
+                {
+                    "title": "I've Got You Under My Ski",
+                    "artist": "Frank Sinatra",
+                    "year": 1956,
+                    "youTubeId": "C1AHec7sfZ8"
+                },
+                {
+                    "title": "My way",
+                    "artist": "Frank Sinatra",
+                    "year": 1969,
+                    "youTubeId": "qQzdAsjWGPg"
+                },
+                {
+                    "title": "Clair de Lune",
+                    "artist": "Debussy",
+                    "year": 1905,
+                    "youTubeId": "WNcsUNKlAKw"
+                },
+                {
+                    "title": "Quartet No. 2 in A minor for Strings, Op. 13, I. Adagio - Allegro vivace",
+                    "artist": "MENDELSSOHN",
+                    "year": 1830,
+                    "youTubeId": "XMwh4KQdUjk"
+                },
+                {
+                    "title": "Somebody To Love",
+                    "artist": "Queen",
+                    "year": 1976,
+                    "youTubeId": "kijpcUv-b8M"
+                }
+            ]
+        },
+        {
+            "_id": "68eafc13aa5b3035dd5d91d2",
+            "ownerEmail": "a@mail.com",
+            "name": "Randy favorite songs",
+            "songs": [
+                {
+                    "title": "Take Me Back To Eden",
+                    "artist": "Sleep Token",
+                    "year": 2023,
+                    "youTubeId": "vFHBOKa_ZG0"
+                },
+                {
+                    "title": "Rain",
+                    "artist": "Sleep Token",
+                    "year": 2023,
+                    "youTubeId": "7Fncun4ObQk"
+                },
+                {
+                    "title": "The Summoning",
+                    "artist": "Sleep Token",
+                    "year": 2023,
+                    "youTubeId": "wJNbtYdr-Hg"
+                },
+                {
+                    "title": "Dangerous",
+                    "artist": "Sleep Token",
+                    "year": 2025,
+                    "youTubeId": "pM1ap2eOHsk"
+                },
+                {
+                    "title": "That's What I Like",
+                    "artist": "Bruno Mars",
+                    "year": 2016,
+                    "youTubeId": "PMivT7MJ41M"
+                },
+                {
+                    "title": "24k Magic",
+                    "artist": "Bruno Mars",
+                    "year": 2016,
+                    "youTubeId": "UqyT8IEBkvY"
+                },
+                {
+                    "title": "Uptown Funk",
+                    "artist": "Mark Ronson",
+                    "year": 1969,
+                    "youTubeId": "OPf0YbXqDm0"
+                },
+                {
+                    "title": "Locked Out Of Heaven",
+                    "artist": "Bruno Mars",
+                    "year": 2012,
+                    "youTubeId": "fA-gBCkj0"
+                },
+                {
+                    "title": "Don't Stop Me Now",
+                    "artist": "Queen",
+                    "year": 1979,
+                    "youTubeId": "HgzGwKwLmgM"
+                },
+                {
+                    "title": "If I Am With You ",
+                    "artist": "Yoshimasa Terui",
+                    "year": 2023,
+                    "youTubeId": "7hkI43oPIxk"
+                }
+            ]
+        },
+        {
+            "_id": "68eafc16aa5b3035dd5d91de",
+            "ownerEmail": "a@mail.com",
+            "name": "Varied Songs",
+            "songs": [
+                {
+                    "title": "Photograph",
+                    "artist": "Cody Fry",
+                    "year": 1979,
+                    "youTubeId": "KoG7O1fwoAc"
+                },
+                {
+                    "title": "Flying",
+                    "artist": "Cody Fry",
+                    "year": 2017,
+                    "youTubeId": "JLVIjdDfECQ"
                 }
             ]
         }
