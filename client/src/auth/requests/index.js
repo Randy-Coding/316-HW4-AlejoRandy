@@ -12,12 +12,23 @@
 
 const BASE_URL = 'http://localhost:4000/auth';
 
+const handleResponse = async (res) => {
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(`HTTP ${res.status}: ${errorText}`);
+  }
+  try {
+    const data = await res.json();
+    return { status: res.status, data };ƒa
+  } catch {
+    return { status: res.status, data: null };
+  }
+};
+
 const api = {
   get: (path) =>
-    fetch(`${BASE_URL}${path}`, {
-      method: 'GET',
-      credentials: 'include',
-    }).then((res) => res.json()),
+    fetch(`${BASE_URL}${path}`, { method: 'GET', credentials: 'include' })
+      .then(handleResponse),
 
   post: (path, data) =>
     fetch(`${BASE_URL}${path}`, {
@@ -25,7 +36,7 @@ const api = {
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
       body: JSON.stringify(data),
-    }).then((res) => res.json()),
+    }).then(handleResponse),
 
   put: (path, data) =>
     fetch(`${BASE_URL}${path}`, {
@@ -33,23 +44,14 @@ const api = {
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
       body: JSON.stringify(data),
-    }).then((res) => res.json()),
+    }).then(handleResponse),
 
   delete: (path) =>
     fetch(`${BASE_URL}${path}`, {
       method: 'DELETE',
       credentials: 'include',
-    }).then((res) => res.json()),
-
-  update: (path, data) =>
-    fetch(`${BASE_URL}${path}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify(data),
-    }).then((res) => res.json()),
+    }).then(handleResponse),
 };
-
 // THESE ARE ALL THE REQUESTS WE`LL BE MAKING, ALL REQUESTS HAVE A
 // REQUEST METHOD (like get) AND PATH (like /register). SOME ALSO
 // REQUIRE AN id SO THAT THE SERVER KNOWS ON WHICH LIST TO DO ITS
