@@ -2,8 +2,8 @@ const dotenv = require('dotenv')
 dotenv.config();
 
 const { sequelize } = require('../../../db/postgre');
-const Playlist = require('../../../models/mongo/playlist-model')
-const User = require("../../../models/mongo/user-model")
+const Playlist = require('../../../models/postgre/playlist-model')
+const User = require("../../../models/postgre/user-model")
 const testData = require("../example-db-data.json")
 
 
@@ -36,8 +36,9 @@ async function resetPostgre() {
 }
 
 sequelize.authenticate()
-  .then(() => {
+  .then(async () => {
     console.log('Connection to PostgreSQL has been established successfully.');
+    await sequelize.sync({ force: true });
     return resetPostgre();
   })
   .catch(err => {

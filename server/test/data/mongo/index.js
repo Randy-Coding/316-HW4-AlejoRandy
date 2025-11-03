@@ -19,8 +19,8 @@ async function fillCollection(collection, collectionName, data) {
 }
 
 async function resetMongo() {
-    const Playlist = require('../../../models/playlist-model')
-    const User = require("../../../models/user-model")
+    const Playlist = require('../../../models/mongo/playlist-model')
+    const User = require("../../../models/mongo/user-model")
     const testData = require("../example-db-data.json")
 
     console.log("Resetting the Mongo DB")

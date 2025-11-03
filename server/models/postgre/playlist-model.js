@@ -1,23 +1,21 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
-/*
-    This is where we specify the format of the data we're going to put into
-    the database.
-    
-    @author McKilla Gorilla
-*/
-const playlistSchema = new Schema(
-    {
-        name: { type: String, required: true },
-        ownerEmail: { type: String, required: true },
-        songs: { type: [{
-            title: String,
-            artist: String,
-            year: Number,
-            youTubeId: String
-        }], required: true }
-    },
-    { timestamps: true },
-)
+const { DataTypes } = require('sequelize')
+const { sequelize } = require('../../db/postgre/index')
 
-module.exports = mongoose.model('Playlist', playlistSchema)
+const Playlist = sequelize.define('Playlist', {
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    ownerEmail: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    songs: {
+        type: DataTypes.JSON,
+        allowNull: false
+    }
+}, {
+    timestamps: true
+})
+
+module.exports = Playlist
