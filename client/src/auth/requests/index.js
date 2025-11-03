@@ -19,7 +19,7 @@ const handleResponse = async (res) => {
   }
   try {
     const data = await res.json();
-    return { status: res.status, data };ƒa
+    return { status: res.status, data };
   } catch {
     return { status: res.status, data: null };
   }

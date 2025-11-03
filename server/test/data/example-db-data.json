@@ -20,12 +20,12 @@
             ]
         },
         {
-            "firstName": "Bob",
+            "firstName": "Bobs",
             "lastName": "Burger",
-            "email": "a@mail.com",
+            "email": "a@mail.coms",
             "passwordHash": "$2a$12$Xfv5y/0qO0f9iHqzZqd4yOyf.Ivoa7ebuINvjy8hjHdHOumYQkRPq",
             "playlists": [
-                "68f526c4ec1ea2ad00a6fae8"
+                "68eafb78aa5b3035dd5d91b2","68eafc13aa5b3035dd5d91d2","68eafc16aa5b3035dd5d91de"
             ]
 
         }
