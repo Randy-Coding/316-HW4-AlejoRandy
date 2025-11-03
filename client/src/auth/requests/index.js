@@ -10,11 +10,45 @@
     @author McKilla Gorilla
 */
 
-import axios from 'axios'
-axios.defaults.withCredentials = true;
-const api = axios.create({
-    baseURL: 'http://localhost:4000/auth',
-})
+const BASE_URL = 'http://localhost:4000/auth';
+
+const api = {
+  get: (path) =>
+    fetch(`${BASE_URL}${path}`, {
+      method: 'GET',
+      credentials: 'include',
+    }).then((res) => res.json()),
+
+  post: (path, data) =>
+    fetch(`${BASE_URL}${path}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify(data),
+    }).then((res) => res.json()),
+
+  put: (path, data) =>
+    fetch(`${BASE_URL}${path}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify(data),
+    }).then((res) => res.json()),
+
+  delete: (path) =>
+    fetch(`${BASE_URL}${path}`, {
+      method: 'DELETE',
+      credentials: 'include',
+    }).then((res) => res.json()),
+
+  update: (path, data) =>
+    fetch(`${BASE_URL}${path}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify(data),
+    }).then((res) => res.json()),
+};
 
 // THESE ARE ALL THE REQUESTS WE`LL BE MAKING, ALL REQUESTS HAVE A
 // REQUEST METHOD (like get) AND PATH (like /register). SOME ALSO
