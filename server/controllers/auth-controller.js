@@ -37,30 +37,29 @@ loginUser = async (req, res) => {
         const { email, password } = req.body;
 
         if (!email || !password) {
+            const msg = "Please enter all required fields.";
             return res
                 .status(400)
-                .json({ errorMessage: "Please enter all required fields." });
+                .json({ success: false, errorMessage: msg, message: msg });
         }
 
         const existingUser = await db.findOne(User, { email: email });
         console.log("existingUser: " + existingUser);
         if (!existingUser) {
+            const msg = "Wrong email or password provided.";
             return res
                 .status(401)
-                .json({
-                    errorMessage: "Wrong email or password provided."
-                });
+                .json({ success: false, errorMessage: msg, message: msg });
         }
 
         console.log("provided password: " + password);
         const passwordCorrect = await bcrypt.compare(password, existingUser.passwordHash);
         if (!passwordCorrect) {
             console.log("Incorrect password");
+            const msg = "Wrong email or password provided.";
             return res
                 .status(401)
-                .json({
-                    errorMessage: "Wrong email or password provided."
-                });
+                .json({ success: false, errorMessage: msg, message: msg });
         }
 
         // LOGIN THE USER
@@ -81,7 +80,8 @@ loginUser = async (req, res) => {
         });
     } catch (err) {
         console.error(err);
-        res.status(500).send();
+        const msg = "An internal server error occurred while trying to log you in.";
+        res.status(500).json({ success: false, errorMessage: msg, message: msg });
     }
 };
 

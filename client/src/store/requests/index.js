@@ -12,18 +12,31 @@
 const BASE_URL = 'http://localhost:4000/store';
 
 const handleResponse = async (res) => {
-  if (!res.ok) {
-    const errorText = await res.text();
-    throw new Error(`HTTP ${res.status}: ${errorText}`);
-  }
-  try {
-    const data = await res.json();
-    return { status: res.status, data };
-  } catch {
-    return { status: res.status, data: null };
-  }
-};
+  const raw = await res.text();
+  let data = null;
 
+  if (raw) {
+    try {
+      data = JSON.parse(raw);
+    } catch {
+      data = raw;
+    }
+  }
+
+  if (!res.ok) {
+    const message =
+      (data && typeof data === 'object' && (data.errorMessage || data.message)) ||
+      (typeof data === 'string' ? `HTTP ${res.status}: ${data}` : `HTTP ${res.status}`);
+
+    const err = new Error(message);
+    err.status = res.status;
+    err.data = data;
+    err.response = { status: res.status, data }; 
+    throw err;
+  }
+
+  return { status: res.status, data };
+};
 const api = {
   get: (path) =>
     fetch(`${BASE_URL}${path}`, { method: 'GET', credentials: 'include' })
