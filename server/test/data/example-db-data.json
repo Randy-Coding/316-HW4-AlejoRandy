@@ -353,64 +353,124 @@
             "name": "Randy favorite songs",
             "songs": [
                 {
-                    "title": "Take Me Back To Eden",
-                    "artist": "Sleep Token",
-                    "year": 2023,
-                    "youTubeId": "vFHBOKa_ZG0"
+                "title": "Take Me Back To Eden",
+                "artist": "Sleep Token",
+                "year": 2023,
+                "youTubeId": "vFHBOKa_ZG0"
                 },
                 {
-                    "title": "Rain",
-                    "artist": "Sleep Token",
-                    "year": 2023,
-                    "youTubeId": "7Fncun4ObQk"
+                "title": "Rain",
+                "artist": "Sleep Token",
+                "year": 2023,
+                "youTubeId": "7Fncun4ObQk"
                 },
                 {
-                    "title": "The Summoning",
-                    "artist": "Sleep Token",
-                    "year": 2023,
-                    "youTubeId": "wJNbtYdr-Hg"
+                "title": "The Summoning",
+                "artist": "Sleep Token",
+                "year": 2023,
+                "youTubeId": "wJNbtYdr-Hg"
                 },
                 {
-                    "title": "Dangerous",
-                    "artist": "Sleep Token",
-                    "year": 2025,
-                    "youTubeId": "pM1ap2eOHsk"
+                "title": "Dangerous",
+                "artist": "Sleep Token",
+                "year": 2025,
+                "youTubeId": "pM1ap2eOHsk"
                 },
                 {
-                    "title": "That's What I Like",
-                    "artist": "Bruno Mars",
-                    "year": 2016,
-                    "youTubeId": "PMivT7MJ41M"
+                "title": "That's What I Like",
+                "artist": "Bruno Mars",
+                "year": 2016,
+                "youTubeId": "PMivT7MJ41M"
                 },
                 {
-                    "title": "24k Magic",
-                    "artist": "Bruno Mars",
-                    "year": 2016,
-                    "youTubeId": "UqyT8IEBkvY"
+                "title": "24k Magic",
+                "artist": "Bruno Mars",
+                "year": 2016,
+                "youTubeId": "UqyT8IEBkvY"
                 },
                 {
-                    "title": "Uptown Funk",
-                    "artist": "Mark Ronson",
-                    "year": 1969,
-                    "youTubeId": "OPf0YbXqDm0"
+                "title": "Uptown Funk",
+                "artist": "Mark Ronson ft. Bruno Mars",
+                "year": 2014,
+                "youTubeId": "OPf0YbXqDm0"
                 },
                 {
-                    "title": "Locked Out Of Heaven",
-                    "artist": "Bruno Mars",
-                    "year": 2012,
-                    "youTubeId": "fA-gBCkj0"
+                "title": "Locked Out Of Heaven",
+                "artist": "Bruno Mars",
+                "year": 2012,
+                "youTubeId": "e-fA-gBCkj0"
                 },
                 {
-                    "title": "Don't Stop Me Now",
-                    "artist": "Queen",
-                    "year": 1979,
-                    "youTubeId": "HgzGwKwLmgM"
+                "title": "Don't Stop Me Now",
+                "artist": "Queen",
+                "year": 1979,
+                "youTubeId": "HgzGwKwLmgM"
                 },
                 {
-                    "title": "If I Am With You ",
-                    "artist": "Yoshimasa Terui",
-                    "year": 2023,
-                    "youTubeId": "7hkI43oPIxk"
+                "title": "If I Am With You",
+                "artist": "Yoshimasa Terui",
+                "year": 2023,
+                "youTubeId": "7hkI43oPIxk"
+                },
+                {
+                "title": "Bohemian Rhapsody",
+                "artist": "Queen",
+                "year": 1975,
+                "youTubeId": "fJ9rUzIMcZQ"
+                },
+                {
+                "title": "Levitating",
+                "artist": "Dua Lipa",
+                "year": 2020,
+                "youTubeId": "TUVcZfQe-Kw"
+                },
+                {
+                "title": "As It Was",
+                "artist": "Harry Styles",
+                "year": 2022,
+                "youTubeId": "H5v3kku4y6Q"
+                },
+                {
+                "title": "Blinding Lights",
+                "artist": "The Weeknd",
+                "year": 2019,
+                "youTubeId": "fHI8X4OXluQ"
+                },
+                {
+                "title": "Bad Habit",
+                "artist": "Steve Lacy",
+                "year": 2022,
+                "youTubeId": "VF-FGf_ZZiI"
+                },
+                {
+                "title": "Hysteria",
+                "artist": "Muse",
+                "year": 2003,
+                "youTubeId": "3dm_5qWWDV8"
+                },
+                {
+                "title": "Everlong",
+                "artist": "Foo Fighters",
+                "year": 1997,
+                "youTubeId": "eBG7P-K-r1Y"
+                },
+                {
+                "title": "In the End",
+                "artist": "Linkin Park",
+                "year": 2001,
+                "youTubeId": "eVTXPUF4Oz4"
+                },
+                {
+                "title": "Smells Like Teen Spirit",
+                "artist": "Nirvana",
+                "year": 1991,
+                "youTubeId": "hTWKbfoikeg"
+                },
+                {
+                "title": "Yellow",
+                "artist": "Coldplay",
+                "year": 2000,
+                "youTubeId": "yKNxeF4KMsY"
                 }
             ]
         },
@@ -420,16 +480,124 @@
             "name": "Varied Songs",
             "songs": [
                 {
-                    "title": "Photograph",
-                    "artist": "Cody Fry",
-                    "year": 1979,
-                    "youTubeId": "KoG7O1fwoAc"
+                "title": "Photograph",
+                "artist": "Cody Fry",
+                "year": 1979,
+                "youTubeId": "KoG7O1fwoAc"
                 },
                 {
-                    "title": "Flying",
-                    "artist": "Cody Fry",
-                    "year": 2017,
-                    "youTubeId": "JLVIjdDfECQ"
+                "title": "Flying",
+                "artist": "Cody Fry",
+                "year": 2017,
+                "youTubeId": "JLVIjdDfECQ"
+                },
+                {
+                "title": "I Hear a Symphony",
+                "artist": "Cody Fry",
+                "year": 2021,
+                "youTubeId": "7s1F8x6dcRI"
+                },
+                {
+                "title": "Underground",
+                "artist": "Cody Fry",
+                "year": 2021,
+                "youTubeId": "y_UX5X8-yyU"
+                },
+                {
+                "title": "Go Your Own Way",
+                "artist": "Fleetwood Mac",
+                "year": 1977,
+                "youTubeId": "6ul-cZyuYq4"
+                },
+                {
+                "title": "Vienna",
+                "artist": "Billy Joel",
+                "year": 1977,
+                "youTubeId": "oZdiXvDU4P0"
+                },
+                {
+                "title": "Carry On Wayward Son",
+                "artist": "Kansas",
+                "year": 1976,
+                "youTubeId": "2X_2IdybTV0"
+                },
+                {
+                "title": "Creep",
+                "artist": "Radiohead",
+                "year": 1992,
+                "youTubeId": "XFkzRNyygfk"
+                },
+                {
+                "title": "Some Nights",
+                "artist": "fun.",
+                "year": 2012,
+                "youTubeId": "qQkBeOisNM0"
+                },
+                {
+                "title": "Take On Me",
+                "artist": "a-ha",
+                "year": 1985,
+                "youTubeId": "djV11Xbc914"
+                },
+                {
+                "title": "Runaway",
+                "artist": "AURORA",
+                "year": 2015,
+                "youTubeId": "d_HlPboLRL8"
+                },
+                {
+                "title": "Human",
+                "artist": "Rag’n’Bone Man",
+                "year": 2016,
+                "youTubeId": "L3wKzyIN1yk"
+                },
+                {
+                "title": "Somebody That I Used To Know",
+                "artist": "Gotye ft. Kimbra",
+                "year": 2011,
+                "youTubeId": "8UVNT4wvIGY"
+                },
+                {
+                "title": "Viva La Vida",
+                "artist": "Coldplay",
+                "year": 2008,
+                "youTubeId": "dvgZkm1xWPE"
+                },
+                {
+                "title": "The Nights",
+                "artist": "Avicii",
+                "year": 2014,
+                "youTubeId": "UtF6Jej8yb4"
+                },
+                {
+                "title": "Counting Stars",
+                "artist": "OneRepublic",
+                "year": 2013,
+                "youTubeId": "hT_nvWreIhg"
+                },
+                {
+                "title": "From the Ground Up",
+                "artist": "Dan + Shay",
+                "year": 2016,
+                "youTubeId": "Vo9bk0Ttu0Y"
+                },
+                {
+                "title": "All of Me",
+                "artist": "John Legend",
+                "year": 2013,
+                "youTubeId": "450p7goxZqg"
+                },
+                {
+                "title": "Arcade",
+                "artist": "Duncan Laurence",
+                "year": 2019,
+                "youTubeId": "MECyL0aRuvQ"
+                },
+                {
+                "title": "Forever Now",
+                "artist": "Michael Bublé",
+                "year": 2018,
+                "youTubeId": "u3cBvuvXfJ4"
                 }
             ]
         }
