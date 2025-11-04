@@ -1,9 +1,6 @@
 const db = require('../db/active');
 const { User, Playlist } = db.models;
 const auth = require('../auth')
-console.log('db keys:', Object.keys(db));
-console.log('db.models keys:', Object.keys(db.models));
-console.log('typeof db.findOne:', typeof db.findOne);
 /*
     This is our back-end API. It provides all the data services
     our database needs. Note that this file contains the controller
@@ -175,9 +172,10 @@ updatePlaylist = async (req, res) => {
             errorMessage: 'UNAUTHORIZED'
         })
     }
-    const body = req.body
+    const body = req.body.playlist || req.body;
     console.log("updatePlaylist: " + JSON.stringify(body));
-    console.log("req.body.name: " + req.body.name);
+    console.log("req.body: " + body);
+    console.log("req.params:", req.params);
 
     if (!body) {
         return res.status(400).json({
@@ -196,10 +194,10 @@ updatePlaylist = async (req, res) => {
         console.log("req.userId: " + req.userId);
         if (user._id == req.userId) {
             console.log("correct user!");
-            console.log("req.body.name: " + req.body.name);
+            console.log("body.name: " + body.name);
 
-            playlist.name = body.playlist.name;
-            playlist.songs = body.playlist.songs;
+            playlist.name = body.name;
+            playlist.songs = body.songs;
             try {
                 await db.update(Playlist, { _id: req.params.id }, { name: playlist.name, songs: playlist.songs });
                 console.log("SUCCESS!!!");

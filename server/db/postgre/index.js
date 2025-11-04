@@ -18,6 +18,19 @@ class PostgreDatabaseManager {
         return query;
     }
 
+    _normalizeResult(result) {
+        if (result === null || result === undefined) {
+            return result;
+        }
+        if (Array.isArray(result)) {
+            return result.map(item => this._normalizeResult(item));
+        }
+        if (result && !result._id && result.id !== undefined) {
+            result._id = result.id;
+        }
+        return result;
+    }
+
     async connect() {
         if (this.connection) return this.connection;
 
@@ -45,7 +58,8 @@ class PostgreDatabaseManager {
 
     async read(model, query = {}, projection = null, options = {}) {
         query = this._normalizeQuery(query);
-        return await model.findAll({ where: query, ...options });
+        const results = await model.findAll({ where: query, ...options });
+        return this._normalizeResult(results);
     }
 
     async update(model, query, updateData, options = {}) {
@@ -60,11 +74,13 @@ class PostgreDatabaseManager {
 
     async findOne(model, query, projection = null, options = {}) {
         query = this._normalizeQuery(query);
-        return await model.findOne({ where: query, ...options });
+        const result = await model.findOne({ where: query, ...options });
+        return this._normalizeResult(result);
     }
 
     async findById(model, id, projection = null, options = {}) {
-        return await model.findByPk(id, options);
+        const result = await model.findByPk(id, options);
+        return this._normalizeResult(result);
     }
 
     async deleteOne(model, query) {
@@ -76,7 +92,7 @@ class PostgreDatabaseManager {
         query = this._normalizeQuery(query);
         const record = await model.findOne({ where: query });
         if (record) await record.destroy();
-        return record;
+        return this._normalizeResult(record);
     }
 
     async saveDocument(instance) {
