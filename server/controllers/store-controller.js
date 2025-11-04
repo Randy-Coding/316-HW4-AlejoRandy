@@ -1,6 +1,9 @@
-const { db, models } = require('../db/active');
-const { User } = models;
+const db = require('../db/active');
+const { User, Playlist } = db.models;
 const auth = require('../auth')
+console.log('db keys:', Object.keys(db));
+console.log('db.models keys:', Object.keys(db.models));
+console.log('typeof db.findOne:', typeof db.findOne);
 /*
     This is our back-end API. It provides all the data services
     our database needs. Note that this file contains the controller

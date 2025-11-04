@@ -84,5 +84,6 @@ class PostgreDatabaseManager {
     }
 }
 
-module.exports = new PostgreDatabaseManager();
-module.exports.sequelize = sequelize;
+const manager = new PostgreDatabaseManager();
+manager.sequelize = sequelize;
+module.exports = manager;
