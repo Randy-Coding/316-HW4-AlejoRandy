@@ -14,7 +14,7 @@ getLoggedIn = async (req, res) => {
             })
         }
 
-        const loggedInUser = await db.findOne(User, { _id: userId });
+        const loggedInUser = await db.findOne(User, { id: userId });
         console.log("loggedInUser: " + loggedInUser);
 
         return res.status(200).json({
@@ -64,7 +64,7 @@ loginUser = async (req, res) => {
         }
 
         // LOGIN THE USER
-        const token = auth.signToken(existingUser._id);
+        const token = auth.signToken(existingUser.id || existingUser._id);
         console.log(token);
 
         res.cookie("token", token, {
@@ -127,7 +127,7 @@ registerUser = async (req, res) => {
         const newUserData = { firstName, lastName, email, passwordHash };
         const savedUser = await db.create(User, newUserData);
 
-        const token = auth.signToken(savedUser._id);
+        const token = auth.signToken(savedUser.id || savedUser._id);
 
         res.cookie("token", token, {
             httpOnly: true,

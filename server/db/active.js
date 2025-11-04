@@ -6,7 +6,7 @@ let models = {};
 const env = process.env.DB_DIALECT?.toLowerCase();
 
 if (env.startsWith("postgre")) {
-    db = require("./postgresql/index.js");
+    db = require("./postgre/index.js");
     models.User = require("../models/postgre/user-model.js");
     models.Playlist = require("../models/postgre/playlist-model.js");
 } else if (env.startsWith("mongo")) {
