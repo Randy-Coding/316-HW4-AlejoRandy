@@ -24,20 +24,18 @@ app.use('/auth', authRouter)
 const storeRouter = require('./routes/store-router')
 app.use('/store', storeRouter)
 
-// INITIALIZE OUR DATABASE OBJECT
+const db = require('./db/active');
 
-const DB_DIALECT = process.env.DB_DIALECT;
-
-if (DB_DIALECT === "postgre") {
-    const { sequelize } = require('./db/postgre');
-    sequelize.authenticate()
-        .then(() => console.log('PostgreSQL connected successfully'))
-        .catch((err) => console.error('Database connection error:', err));
-} else if (DB_DIALECT === "mongo") {
-    const db = require('./db/mongo');
-    db.on('error', console.error.bind(console, 'Database connection error:'));
-    db.once('open', () => console.log('MongoDB connected successfully'));
+async function initializeDatabase() {
+    try {
+        await db.connect();
+        const dbName = process.env.DB_DIALECT.toUpperCase();
+        console.log(`${dbName} connected successfully`);
+    } catch (err) {
+        console.error('Database connection error:', err);
+    }
 }
+initializeDatabase();
 
 // PUT THE SERVER IN LISTENING MODE
 app.listen(PORT, () => console.log(`Playlister Server running on port ${PORT}`))
